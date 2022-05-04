@@ -28,7 +28,7 @@ def min_max_count(partition):
         if(element < minNum):
             minNum = element
         count +=1
-
+    #use [] or all of the results will be flattened into a sequence
     return [(maxNum, minNum, count)]
 
 
@@ -53,6 +53,7 @@ if __name__ == '__main__':
     #show
     print("Some results for mapped rdd", mapped_rdd.take(10))
     #using reduce to show the final output
+    #this will return a tuple rather than an rdd object
     output = mapped_rdd.reduce(lambda a,b:(max(a[0], b[0]), min(a[1], b[1]), a[2] + b[2]))
     #print output
     print("max: {}\n min: {}\n count: {}\n".format(output[0], output[1], output[2]))
