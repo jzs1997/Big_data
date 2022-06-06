@@ -253,7 +253,7 @@ with 41 nodes (one master node and 40 worker
 nodes and master does not store any data at 
 all). Further assume that the data replication 
 factor is 4.  Using this cluster, we are running 
-a single MapReduce program (job), 
+a single MapReduce program (job),
 
 a. how many nodes can fail at a single 
    point of time so that the whole single 
